@@ -1,6 +1,6 @@
 function [ time_str, h, m, s] = Sec2TimeStr(sec_num)
-%SEC2TIMESTR Summary of this function goes here
-%   Detailed explanation goes here
+% translate second num to 'hh:mm:ss'
+% and also give h,m,s num
     temp_num = sec_num + 34200;
     s = mod(temp_num,60);
     m = mod(floor(temp_num/60),60);
