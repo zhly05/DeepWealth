@@ -13,7 +13,8 @@ while not_gotdata
 end
 n = regexp(raw_str(1:300),',\d*:\d*:\d*,');
 timestr = raw_str(n+1:n+8);
-tick_time = str2double(timestr(7:8)) + str2double(timestr(4:5))*60 + str2double(timestr(1:2))*3600 - 34200;
+tick_time = TimeStr2Sec(timestr);
+%str2double(timestr(7:8)) + str2double(timestr(4:5))*60 + str2double(timestr(1:2))*3600 - 34200;
 
 end
 

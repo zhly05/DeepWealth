@@ -4,6 +4,11 @@ function CodingStyle()
 % 2. Prefix_
 %       Path_ is for folder path and ends up with '/'
 %       Name_ is for file name
+% 3. Notations
+%       StockCode: 'sh600000'
+%       StockName: '浦发银行'
+%       StockIdx:  StockName(StockIdx) = '浦发银行';
+%       StockCodeNum: 600000;
 % to be continue.
 
 end

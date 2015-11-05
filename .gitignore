@@ -1,5 +1,6 @@
 # Matlab Autosave files
 *.asv
+*.p
 
 # Windows image file caches
 Thumbs.db

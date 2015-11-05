@@ -16,6 +16,7 @@ Path_GatherDataBlk = [Path_Root 'GatherRawData\'];
 Path_DataMiningBlk = [Path_Root 'DataMining\'];
 Path_GUIBlk = [Path_Root 'GUI\'];
 Path_GlobalEnv = [Path_Root 'GlobalEnv\'];
+Path_Log = [Path_Root 'Log\'];
 
 %%
 %StockArray = load([RawDataPath '2015_07_29.mat']);
@@ -23,3 +24,8 @@ Path_GlobalEnv = [Path_Root 'GlobalEnv\'];
 
 %% add path
 addpath(Path_GlobalEnv);
+% pcode GlobalEnv to speed up
+f = dir([Path_GlobalEnv '*.m']);
+for i = 1:length(f)
+    pcode(f(i).name(1:end-2),'-inplace')
+end

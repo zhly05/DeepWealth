@@ -1,4 +1,4 @@
-function [ frame , valid_flag ] = FetchSingleFrame( raw_str, comma)
+function [ frame , valid_flag ] = RawStr2Frame( raw_str, comma)
 %FETCH_FRAME Summary of this function goes here
 %   Detailed explanation goes here
 try
@@ -17,7 +17,3 @@ catch
     disp(datestr(now,'yyyy_mm_dd_HH_MM_SS'));
 end
 end
-
-%aaa = strcat(temp_cell{1:2:end});
-%bbb = reshape([aaa ' '],22,[]);
-%aaa = reshape(bbb(12:19,:),8,[])'
