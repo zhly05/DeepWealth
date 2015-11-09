@@ -9,6 +9,7 @@ while not_gotdata
     catch e
         pause(1);
         not_gotdata = 1;
+        ErrorLog(e);
     end
 end
 n = regexp(raw_str(1:300),',\d*:\d*:\d*,');

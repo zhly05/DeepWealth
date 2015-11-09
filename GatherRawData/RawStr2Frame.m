@@ -11,9 +11,10 @@ try
     frame.local_time = datestr(now,'yyyy_mm_dd_HH_MM_SS');
     frame.items = str2double(temp_cell(:,2:30));
     valid_flag = true;
-catch
+catch e 
     frame = struct('time','','date','','local_time','','items','');
     valid_flag = false;
+    ErrorLog(e);
     disp(datestr(now,'yyyy_mm_dd_HH_MM_SS'));
 end
 end

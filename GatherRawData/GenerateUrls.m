@@ -1,7 +1,7 @@
-%% Generate URLs
 function [urls] = GenerateUrls()
+% Generate URLs.txt and Stockcode.mat
     PackageN = 700;
-    [~, Idx, Stockcode,Stockname] = valid_code(PackageN);
+    [~, Idx, Stockcode,Stockname] = ScanForValidCode(PackageN);
     StockN = length(Idx);
     PageN = floor(StockN / PackageN) + 1;
     urls = cell(PageN,1);
@@ -24,7 +24,10 @@ end
 
 
 
-function [pointers,idx,stockcode,stockname] = valid_code(packsize)
+function [pointers,idx,stockcode,stockname] = ScanForValidCode(packsize)
+% Scan which stocks data can be gathered.
+% url_size: max number of stock codes can be sent in one url
+% from 0:maxN-1 + sh600000
     n = 0;
     maxN = 6000;  % 0 : max-1
     pointers = zeros(maxN,1);
@@ -39,8 +42,16 @@ function [pointers,idx,stockcode,stockname] = valid_code(packsize)
             end
         end
         to_send = strcat('http://hq.sinajs.cn/list=',try_code{:});
-        cont_str = urlread(to_send);
-        cont_cell = strsplit(cont_str,'";');
+        for i = 1:5
+            try
+                cont_str = urlread(to_send);
+                cont_cell = strsplit(cont_str,'";');
+                break;
+            catch e
+                ErrorLog(e);
+                pause(1);
+            end
+        end
         cont_cell{1} = [' ' cont_cell{1}];
         for i = 1:length(cont_cell)
             if length(cont_cell{i})> 22

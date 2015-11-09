@@ -1,11 +1,10 @@
 
-str = cd;
-disp(str);
-%cd('d:\Zhly\Documents\MATLAB\stock\fetch_raw_data')
-[a1] = GenerateUrls();
-save('a.mat','a1');
+run ../Test_env.m;
+
 disp('started by schduled tasks');
 disp('developing new version of fetcher');
+
+[a1] = GenerateUrls();
 
 dailyTask
 
