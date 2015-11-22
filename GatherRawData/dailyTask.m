@@ -14,7 +14,7 @@ if ~exist('StockInfo','var')
     Time_Setting.time1505 = datenum(datevec(floor(now)) +   [0 0 0 15 05 00]);
     Time_Setting.alarm0926vec = datevec(floor(now)) +       [0 0 0 09 26 00];
     Time_Setting.alarm1256vec = datevec(floor(now)) +       [0 0 0 12 56 00];
-    Time_Setting.interval = 20; %(sec).
+    Time_Setting.interval = 20; %(sec). 20 for testing, 2.4 for real case.
 end
 
 %% Load URLs from URLs.txt
@@ -86,6 +86,10 @@ end
 
 
 %% Update low frequency parameters (daily)
+StockSFA = FetchShareFlow(Stockcode);
+for i = 1:length(Stockcode)
+    StockArrays.(Stockcode(i,:)).shareflow = StockSFA(i);
+end
 
 %% Postprocess
 % unfinished

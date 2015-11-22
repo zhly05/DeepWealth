@@ -1,3 +1,8 @@
+%% Env Setup Todo List
+% you should update all the paths here.
+
+
+
 clear; close; 
 %% const defination
 Path_DeepWealth = 'd:\Zhly\Documents\GitHub\DeepWealth\';
@@ -21,16 +26,11 @@ Path_Log = [Path_Root 'Log\'];
 
 %%
 %StockArray = load([RawDataPath '2015_07_29.mat']);
-try
-    fasgdasd
-    a = 1;
-catch e
-    ErrorLog(e)
-end
 
 %% add path
 addpath(Path_GlobalEnv);
 % pcode GlobalEnv to speed up
+
 return;
 f = dir([Path_GlobalEnv '*.m']);
 for i = 1:length(f)

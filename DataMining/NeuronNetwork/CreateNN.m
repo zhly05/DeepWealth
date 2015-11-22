@@ -26,10 +26,21 @@ function [ NN ] = CreateNN( NN_size , NN_type)
     end
     NN.HiddenLayers = struct('type',lower(NN_type));
     
-    NN.iterN = 1000;
-    NN.alpha = 0.005;
-    NN.beta = 0;0.001;
-    NN.lamda = 0;0.001;
-    NN.rho = 0.05;
+    for i = 1:NN.layersN - 1
+        NN.HiddenLayers(i).size = [NN_size(i+1), NN_size(i)];
+        % layer(i) to layer(i+1) 
+        NN.HiddenLayers(i).w1 = rand(NN_size(i+1),NN_size(i)) * 0.1;
+        NN.HiddenLayers(i).b1 = rand(NN_size(i+1),1) * 0.1;
+        % layer(i+1) to layer(i) 
+        NN.HiddenLayers(i).w2 = rand(NN_size(i),NN_size(i+1)) * 0.1;
+        NN.HiddenLayers(i).b2 = rand(NN_size(i),1) * 0.1;
+        
+        NN.HiddenLayers(i).iterN = 1000;
+        NN.HiddenLayers(i).alpha = 0.005;
+        NN.HiddenLayers(i).beta = 0;0.001;
+        NN.HiddenLayers(i).lamda = 0;0.001;
+        NN.HiddenLayers(i).rho = 0.05;
+    end
+    
 end
 
