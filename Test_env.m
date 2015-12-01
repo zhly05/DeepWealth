@@ -23,7 +23,11 @@ Path_DataMiningBlk = [Path_Root 'DataMining\'];
 Path_GUIBlk = [Path_Root 'GUI\'];
 Path_GlobalEnv = [Path_Root 'GlobalEnv\'];
 Path_Log = [Path_Root 'Log\'];
+Path_AutoExecute = [Path_Root 'AutoExecute\'];
 
+%% run autohotkey scripts
+addpath(Path_GlobalEnv);
+winopen([Path_AutoExecute 'AHKscripts\AutoExecute.ahk']);
 %%
 %StockArray = load([RawDataPath '2015_07_29.mat']);
 
