@@ -2,7 +2,7 @@
 %yesyesterday = load('D:\Document Files\Stock\zip\2015_07_27.mat');
 %%
 fn = fieldnames(StockArrays);
-    sum_p = zeros(1,2616);
+sum_p = zeros(1,2616);
 for i = 1:length(fn)
     %plot_lines(StockArrays,fn{i});
     todo = today.StockArrays.(fn{i});

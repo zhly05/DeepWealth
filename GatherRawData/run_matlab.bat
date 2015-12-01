@@ -1,0 +1,1 @@
+start matlab.exe -r run('D:\Zhly\Documents\GitHub\DeepWealth\GatherRawData\run_matlab.m')

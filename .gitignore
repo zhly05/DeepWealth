@@ -1,3 +1,10 @@
+# Matlab Autosave files
+*.asv
+*.p
+
+# AutoHotKeys Confidential files
+*.ahk
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -43,4 +50,7 @@ Temporary Items
 .apdisk
 *.ahk
 *.p
+GatherRawData/Stockcode.mat
 GatherRawData/Stockcode_bk.mat
+GatherRawData/URLs.txt
+

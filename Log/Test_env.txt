@@ -1,0 +1,30 @@
+----09-Nov-2015 11:15:33----
+MATLAB:UndefinedFunction
+Undefined function or variable 'fasgdasd'.
+stack(1)--Line: ,  Func: Test_env,  in File:D:\Zhly\Documents\GitHub\DeepWealth\Test_env.m
+
+----09-Nov-2015 11:15:34----
+MATLAB:UndefinedFunction
+Undefined function or variable 'fasgdasd'.
+stack(1)--Line: ,  Func: Test_env,  in File:D:\Zhly\Documents\GitHub\DeepWealth\Test_env.m
+
+----09-Nov-2015 11:15:35----
+MATLAB:UndefinedFunction
+Undefined function or variable 'fasgdasd'.
+stack(1)--Line: ,  Func: Test_env,  in File:D:\Zhly\Documents\GitHub\DeepWealth\Test_env.m
+
+----09-Nov-2015 11:15:58----
+MATLAB:UndefinedFunction
+Undefined function or variable 'fasgdasd'.
+stack(1)--Line: 25,  Func: Test_env,  in File:D:\Zhly\Documents\GitHub\DeepWealth\Test_env.m
+
+----09-Nov-2015 11:15:59----
+MATLAB:UndefinedFunction
+Undefined function or variable 'fasgdasd'.
+stack(1)--Line: 25,  Func: Test_env,  in File:D:\Zhly\Documents\GitHub\DeepWealth\Test_env.m
+
+----09-Nov-2015 11:21:21----
+MATLAB:UndefinedFunction
+Undefined function or variable 'fasgdasd'.
+stack(1)--Line: 25,  Func: Test_env,  in File:D:\Zhly\Documents\GitHub\DeepWealth\Test_env.m
+
