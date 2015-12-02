@@ -45,7 +45,7 @@ if ~exist('timeN','var')
         temp_code = StockInfo.Stockcode(i,:);
         StockArrays.(temp_code) = struct('code',temp_code,'name',StockInfo.Stockname{i},'date',datestr(now,'yyyy-mm-dd'),'timearray',zeros(3600,1)-2000,'items',zeros(3600,29));
     end
-    url_iter = [1,1];
+    url_iter = ones(1,url_N);
 end
 
 %% Main process. Fetch raw data.
