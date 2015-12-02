@@ -1,11 +1,17 @@
-function shareFlowArray = FetchShareFlow(codebook)
+function shareFlowArray = FetchShareFlow(stockInfo)
+    codebook = stockInfo.Stockcode;
     shareFlowArray = zeros(length(codebook),1);
+    fprintf('Fetch flow: ');
     for i = 1:length(codebook)
         shareFlowArray(i) = FetchSingleShareFlow(codebook(i,3:8));
-        if mod(i,100)
-            disp(i)
+        if(shareFlowArray(i)==0 && isfield(stockInfo.preDefinedShare,codebook(i,:)))
+            shareFlowArray(i) = stockInfo.preDefinedShare.(codebook(i,:));
+        end
+        if ~mod(i,100)
+            fprintf('.');
         end
     end
+    fprintf('Finish\r\n');
 end
 
 function shareFlow = FetchSingleShareFlow(code)    

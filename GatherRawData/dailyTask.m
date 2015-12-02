@@ -86,9 +86,9 @@ end
 
 
 %% Update low frequency parameters (daily)
-StockSFA = FetchShareFlow(Stockcode);
-for i = 1:length(Stockcode)
-    StockArrays.(Stockcode(i,:)).shareflow = StockSFA(i);
+StockSFA = FetchShareFlow(StockInfo);
+for i = 1:length(StockInfo.Stockcode)
+    StockArrays.(StockInfo.Stockcode(i,:)).shareflow = StockSFA(i);
 end
 
 %% Postprocess
